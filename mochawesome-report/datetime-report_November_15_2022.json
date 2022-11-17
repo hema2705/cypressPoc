@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-11-15T17:15:27.378Z",
+    "end": "2022-11-15T17:15:40.429Z",
+    "duration": 13051,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "520b3c32-48e1-48f9-a875-fac9ed1496aa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestCases\\demoQA-test.cy.js",
+      "file": "cypress\\e2e\\TestCases\\demoQA-test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f8ea48c0-8b92-4adb-a807-5129eff0b62a",
+          "title": "Demo qa firs test -login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verif the login-posivte case",
+              "fullTitle": "Demo qa firs test -login Verif the login-posivte case",
+              "timedOut": null,
+              "duration": 6843,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\TestCases\\\\demoQA-test.cy.js\\\\Demo qa firs test -login -- Verif the login-posivte case (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "//Object Creation for PageObject Page Class and assigning it to a constant variable\n// const homePage=new HomePage();\ncy.visit('my-account/');\nhomePage.getEmail().type(this.data1.email);\nhomePage.getUserName().type(this.data.userName);\nhomePage.getPassword().type(this.data.password);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#1reg_username`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#1reg_username`, but never found it.\n    at HomePage.getUserName (webpack:///./cypress/support/PageObjects/HomePage.js:4:18)\n    at Context.eval (webpack:///./cypress/e2e/TestCases/demoQA-test.cy.js:27:13)",
+                "diff": null
+              },
+              "uuid": "90661f32-8a08-49d6-a254-c50f6bfe2951",
+              "parentUUID": "f8ea48c0-8b92-4adb-a807-5129eff0b62a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verif the login-negetive case",
+              "fullTitle": "Demo qa firs test -login Verif the login-negetive case",
+              "timedOut": null,
+              "duration": 6060,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\TestCases\\\\demoQA-test.cy.js\\\\Demo qa firs test -login -- Verif the login-negetive case (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "//Object Creation for PageObject Page Class and assigning it to a constant variable\n// const homePage=new HomePage();\ncy.visit('my-account/');\nhomePage.getEmail().type('abc@gmail.com');\nhomePage.getUserName().type('testuser');\nhomePage.getPassword().type('Test@1234');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#1reg_username`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#1reg_username`, but never found it.\n    at HomePage.getUserName (webpack:///./cypress/support/PageObjects/HomePage.js:4:18)\n    at Context.eval (webpack:///./cypress/e2e/TestCases/demoQA-test.cy.js:37:17)",
+                "diff": null
+              },
+              "uuid": "40fd187f-dc87-4936-85bc-41a541f66539",
+              "parentUUID": "f8ea48c0-8b92-4adb-a807-5129eff0b62a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "90661f32-8a08-49d6-a254-c50f6bfe2951",
+            "40fd187f-dc87-4936-85bc-41a541f66539"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12903,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "datetime-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Automation report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "reportFilename": "datetime-report",
+        "timestamp": "longDate"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

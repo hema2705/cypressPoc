@@ -1,0 +1,20 @@
+{
+  "name": "autoamtionframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postReport": "jrm cypress/results/.xml cypress/resultfinal/ab.xml",
+    "test": "npm run prereport && npx cypress run && npm run postReport",
+    "example": "Hello world",
+    "open": "npx cypress open",
+    "prereport": "rimraf cypress/videos/Login/* "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^11.0.1",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "rimraf": "^3.0.2"
+  }
+}
